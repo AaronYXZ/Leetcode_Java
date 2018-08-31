@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CrackCodeInterviews/CrackCodeInterviews.iml" filepath="$PROJECT_DIR$/CrackCodeInterviews/CrackCodeInterviews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStructure/DataStructure.iml" filepath="$PROJECT_DIR$/DataStructure/DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" filepath="$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" filepath="$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaInAction/JavaInAction.iml" filepath="$PROJECT_DIR$/JavaInAction/JavaInAction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ml-usecases/ml-usecases.iml" filepath="$PROJECT_DIR$/ml-usecases/ml-usecases.iml" />
+    </modules>
+  </component>
+</project>
