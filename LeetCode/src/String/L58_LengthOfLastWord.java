@@ -11,7 +11,7 @@ public class L58_LengthOfLastWord {
 
     public static void main(String[] args) {
         System.out.println(solution1("abc def g   "));
-        System.out.println(solution1("abc def g   ade"));
+        System.out.println(solution1("abc def g   ad"));
 
     }
 }
