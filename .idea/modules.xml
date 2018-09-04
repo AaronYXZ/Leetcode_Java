@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CrackCodeInterviews/CrackCodeInterviews.iml" filepath="$PROJECT_DIR$/CrackCodeInterviews/CrackCodeInterviews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CC189/CC189.iml" filepath="$PROJECT_DIR$/CC189/CC189.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataStructure/DataStructure.iml" filepath="$PROJECT_DIR$/DataStructure/DataStructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" filepath="$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" filepath="$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" />
