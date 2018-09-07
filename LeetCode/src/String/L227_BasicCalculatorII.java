@@ -4,6 +4,14 @@ import java.util.Stack;
 
 import static java.lang.Character.isDigit;
 
+/*
+Q:
+https://leetcode.com/problems/basic-calculator-ii/description/
+S:
+https://leetcode.com/problems/basic-calculator-ii/discuss/63003/Share-my-java-solution
+
+ */
+
 public class L227_BasicCalculatorII {
 
     public static int calculate(String s) {
