@@ -4,6 +4,16 @@ Q:
 https://leetcode.com/problems/add-digits/description/
 S:
 https://leetcode.com/problems/add-digits/discuss/68667/Simple-Java-Solution-No-recursion-loop
+
+Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+
+Example:
+
+Input: 38
+Output: 2
+Explanation: The process is like: 3 + 8 = 11, 1 + 1 = 2.
+             Since 2 has only one digit, return it.
+
  */
 public class L258_AddDigits {
     public static int solution1_Loop(int n){
