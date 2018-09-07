@@ -8,7 +8,7 @@ public class L227_BasicCalculatorII {
 
     public static int calculate(String s) {
         int len = s.length();
-        if (s == null || len == 0 return 0;
+        if (s == null || len == 0) return 0;
         int num = 0;
         Stack<Integer> stack = new Stack<>();
         char sign = '+';
@@ -19,9 +19,18 @@ public class L227_BasicCalculatorII {
             }
             if ((!isDigit(s.charAt(i)) && ' ' != s.charAt(i)) || i == len - 1) {
                 if (sign == '-') stack.push(-num);
-                if (sign == '+')
+                if (sign == '+') stack.push(num);
+                if (sign == '*') stack.push(stack.pop() * num);
+                if (sign == '/') stack.push(stack.pop() / num);
+                sign = s.charAt(i);
+                num = 0;
             }
         }
+        int re = 0;
+        for (int i:stack){
+            re+=i;
+        }
+        return re;
 
     }
 }
