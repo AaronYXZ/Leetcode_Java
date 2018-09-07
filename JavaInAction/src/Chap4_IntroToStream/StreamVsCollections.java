@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+//https://github.com/java8/Java8InAction/blob/master/src/main/java/lambdasinaction/chap4/StreamVsCollection.java
 public class StreamVsCollections {
 
     public static void main(String[] args) {
