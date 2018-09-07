@@ -12,6 +12,14 @@ https://leetcode.com/problems/basic-calculator-ii/discuss/63003/Share-my-java-so
 
  */
 
+// Use num to store the current number, and calculate if it's multiple digits.
+// Whenever encounters a sign, if it's +, -, store the num to stack ; it it's *, /, get the previous number
+// by stack.pop and * or / with the current num, store it to stack.
+// Basically, go through every char in string, digit then store to num, sign +- then store num to stack;
+// sign */ then use num right away and store the result to stack
+
+// 123+4*5/6-2
+
 public class L227_BasicCalculatorII {
 
     public static int calculate(String s) {
