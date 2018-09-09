@@ -3,6 +3,12 @@ package HashTable;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+Q:
+https://leetcode.com/problems/isomorphic-strings/description/
+S:
+
+ */
 public class L205_IsomorphicStrings {
     public static boolean solution(String s, String t){
         Map<Character, Character> map = new HashMap<>();

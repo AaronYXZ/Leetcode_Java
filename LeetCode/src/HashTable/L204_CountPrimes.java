@@ -16,7 +16,7 @@ The sieve of Eratosthenes can be expressed in pseudocode, as follows:[7][8]
 
  for i = 2, 3, 4, ..., not exceeding √n:
    if A[i] is true:
-     for j = i2, i2+i, i2+2i, i2+3i, ..., not exceeding n:
+     for j = i^2, i^2+i, i^2+2i, i2+3i, ..., not exceeding n:
        A[j] := false.
 
  Output: all i such that A[i] is true.
