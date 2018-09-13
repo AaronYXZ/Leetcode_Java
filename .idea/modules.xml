@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/CC189/CC189.iml" filepath="$PROJECT_DIR$/CC189/CC189.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS61B/CS61B.iml" filepath="$PROJECT_DIR$/CS61B/CS61B.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataStructure/DataStructure.iml" filepath="$PROJECT_DIR$/DataStructure/DataStructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" filepath="$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" filepath="$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" />
