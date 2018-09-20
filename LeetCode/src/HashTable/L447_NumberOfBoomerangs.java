@@ -8,12 +8,30 @@ S:
 https://leetcode.com/problems/number-of-boomerangs/discuss/92861/Clean-java-solution%3A-O(n2)-166ms
  */
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class L447_NumberOfBoomerangs {
     public static int numberOfBoomerangs(int[][] points){
+        Map<Integer, Integer> map = new HashMap<>();
 
         int res = 0;
-        return res;
+        for (int i = 0; i < points.length; i++){
+            for (int j = 0; j<points.length; j++){
+                if (i == j)
+                    continue;
+                int d = distance(points[i], points[j]);
+                map.put(d, map.getOrDefault(d, 0) + 1);
 
+            }
+            for (int value:map.values()){
+                res += value * (value-1);
+            }
+            map.clear();
+
+        }
+
+        return res;
     }
 
     public static int distance(int[] a, int[] b){
