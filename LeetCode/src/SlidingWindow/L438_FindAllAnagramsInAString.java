@@ -93,7 +93,7 @@ public class L438_FindAllAnagramsInAString {
             if (map.containsKey(c)){
                 map.put(c, map.get(c) -1);
                 if (map.get(c) == 0) counter --;
-            }
+
             end ++;
 
             while (counter == 0){
