@@ -22,7 +22,7 @@ S:
 https://leetcode.com/problems/h-index/discuss/70768/Java-bucket-sort-O(n)-solution-with-detail-explanation
  */
 
-public class L274_HIndex {
+public class L274_Hindex {
 
     public static int Hindex(int[] citations){
         int n = citations.length;
