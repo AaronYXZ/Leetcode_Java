@@ -1,6 +1,6 @@
-package CS61B;
+package C2_Lists;
 
-import static CS61B.List2_1.Walrus;
+import static C2_Lists.List2_1.Walrus;
 
 // https://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
 

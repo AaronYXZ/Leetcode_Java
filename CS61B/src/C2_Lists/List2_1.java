@@ -1,4 +1,4 @@
-package CS61B;
+package C2_Lists;
 
 public class List2_1 {
 
