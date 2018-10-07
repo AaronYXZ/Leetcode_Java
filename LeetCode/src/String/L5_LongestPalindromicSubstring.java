@@ -21,22 +21,24 @@ Output: "bb"
 
 public class L5_LongestPalindromicSubstring {
 
-    public static String solution3DynamicProgramming(String s){
+    public static String solution3DynamicProgramming(String s) {
         int length = s.length();
         boolean[][] P = new boolean[length][length];
         int maxLen = 0;
         String maxPal = "";
 
-        for (int i = 1; i<=length; i++){
-            for (int start = 0; start<length; start++){
-                int end = start+i-1;
-                if (end >=length) break;
-                P[start][end] = (i ==1 || i==2 || P[start+1][end-1]) && s.charAt(start) == s.charAt(end);
-                if (P[start][end] && i > maxLen ){
-                    maxPal = s.substring(start, end+1);
+        for (int i = 1; i <= length; i++) {
+            for (int start = 0; start < length; start++) {
+                int end = start + i - 1;
+                if (end >= length) {
+                    break;
+                }
+                P[start][end] = (i == 1 || i == 2 || P[start + 1][end - 1]) && s.charAt(start) == s.charAt(end);
+                if (P[start][end] && i > maxLen) {
+                    maxPal = s.substring(start, end + 1);
                 }
             }
         }
-    return maxPal;
+        return maxPal;
     }
 }
