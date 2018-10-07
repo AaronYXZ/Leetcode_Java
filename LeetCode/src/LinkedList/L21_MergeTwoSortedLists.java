@@ -1,6 +1,5 @@
 package LinkedList;
 
-import LinkedList.L19_RemoveNthNodeFromEndOfList.ListNode;
 /*
 Q:
 https://leetcode.com/problems/merge-two-sorted-lists/

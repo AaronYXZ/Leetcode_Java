@@ -20,13 +20,6 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 public class L206_ReverseLinkedList {
 
-    public static class ListNode {
-
-        int val;
-        ListNode next;
-
-        ListNode(int x) { val = x; }
-    }
 
     public static ListNode reverseList(ListNode head) {
         if (head == null) return head;
