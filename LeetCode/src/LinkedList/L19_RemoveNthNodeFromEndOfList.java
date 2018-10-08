@@ -26,26 +26,7 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/discuss/8804/Simp
 
 public class L19_RemoveNthNodeFromEndOfList {
 
-
-    // ToDo modify this to work
-    public ListNode removeNthNodeFromEnd(ListNode head, int n){
-        ListNode listNode = head;
-        ListNode result = head;
-        int counter = 0;
-        while (listNode.next != null){
-            counter ++;
-            listNode = listNode.next;
-        }
-        while (counter - n >=0){
-            head = head.next;
-        }
-        head = head.next.next;
-
-        return result;
-
-    }
-
-    public ListNode removeNthFromEnd1Pass(ListNode head, int n){
+    public static ListNode removeNthFromEnd1Pass(ListNode head, int n){
         ListNode start = new ListNode(0);
         ListNode slow = start, fast = start;
         slow.next = head;
@@ -62,5 +43,26 @@ public class L19_RemoveNthNodeFromEndOfList {
         slow.next = slow.next.next;
 
         return start.next;
+    }
+
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode start = new ListNode(0);
+        ListNode slow = start;
+        ListNode fast = start;
+        slow.next = head;
+        while (n >0){
+            fast = fast.next;
+            n--;
+        }
+        while (fast.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return head;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

@@ -24,6 +24,6 @@ public class L138_CopyListWithRandomPointer {
 
             iter = next;
         }
-
+        return iter;
     }
 }
