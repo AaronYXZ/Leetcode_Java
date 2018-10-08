@@ -26,11 +26,6 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/discuss/8804/Simp
 
 public class L19_RemoveNthNodeFromEndOfList {
 
-    public class ListNode{
-        int val;
-        ListNode next;
-        ListNode(int x){this.val = x;}
-    }
 
     // ToDo modify this to work
     public ListNode removeNthNodeFromEnd(ListNode head, int n){

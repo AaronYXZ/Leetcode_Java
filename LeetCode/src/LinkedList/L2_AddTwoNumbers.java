@@ -1,11 +1,7 @@
 package LinkedList;
 
 public class L2_AddTwoNumbers {
-    public class ListNode{
-        int val;
-        ListNode next;
-        ListNode(int x){ this.val = x;}
-    }
+
         public ListNode addTwoNumbers(ListNode l1, ListNode l2){
             ListNode c1 = l1;
             ListNode c2 = l2;

@@ -1,7 +1,5 @@
 package InterviewQuestions;
 
-import java.net.URL;
-
 public class Q1_03_URLify {
 
     public static char[] URLify(char[] str, int trueLength){

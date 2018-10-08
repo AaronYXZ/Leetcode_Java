@@ -18,10 +18,19 @@ Output: false
  */
 
 public class L125_ValidPalindrome {
+    public boolean isPalindrome(String s) {
+        s = s.toLowerCase().replaceAll("[^0-9a-z]", "");
+        int i = 0, j = s.length()-1;
+        while (i < j){
+            if (s.charAt(i++) != s.charAt(j--)){
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static boolean solution1_naive(String s) {
         s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
-        ;
 
         StringBuilder stringBuilder1 = new StringBuilder();
         StringBuilder stringBuilder2 = new StringBuilder();
