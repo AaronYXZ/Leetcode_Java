@@ -33,5 +33,4 @@ public class test {
         return index;
     }
 
-    public static void
 }
