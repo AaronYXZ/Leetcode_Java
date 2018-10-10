@@ -31,5 +31,12 @@ public class L283_MoveZeroes {
         for (int i = zeroes; i < nums.length; i++){
             nums[i] = 0;
         }
+
+        int[] a = {1,2,3,4,5};
+        int[] b = {0,0,0,0,0};
+
+
+
     }
+
 }
