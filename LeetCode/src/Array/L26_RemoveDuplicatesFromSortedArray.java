@@ -43,6 +43,13 @@ public class L26_RemoveDuplicatesFromSortedArray {
             }
         }
 
+
         return j;
+    }
+
+    public static void main(String[] args) {
+        String string = "abc";
+        boolean contains = "abcde".contains(string);
+        System.out.println(contains);
     }
 }
