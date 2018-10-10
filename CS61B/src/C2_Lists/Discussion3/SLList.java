@@ -24,13 +24,15 @@ public class SLList {
     //For example, if the SLList is 5 → 6 → 2, insert(10, 1) results in 5 → 10 → 6 → 2.
 
     public void insert(int item, int position) {
-        IntNode dummy = first;
-        int counter = 1;
-        while (counter < position) {
-            dummy = dummy.next;
+        if (position == 0 || first == null){
+            addFirst(item);
+            return;
         }
-        IntNode temp = dummy.next;
-        dummy.next = new IntNode(item, temp);
+
+        while (position > 1){
+//            IntNode dummy =
+        }
+
     }
 
     // Add another method to the SLList class that reverses the elements. Do this using
