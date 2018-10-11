@@ -36,6 +36,9 @@ ToDo Solve FollowUp questions
 
 public class L350_IntersectionOfTwoArrays2 {
 
+    // Use a map to store number and its freq in nums1, iterate through nums2 and check if it appears in map;
+    // Use a List to store the found number, then create array and copy number in List to the array
+
     public int[] intersect(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
