@@ -2,10 +2,10 @@ package TwoPointer;
 
 public class ListNode {
 
-    ListNode head;
-    int x;
+    ListNode next;
+    int val;
 
     ListNode(int x){
-        this.x = x;
+        this.val = x;
     }
 }
