@@ -42,18 +42,14 @@ public class SLList {
     }
 
     // Add x to the end of the list
+    // It's slow, For a long list, the addLast method has to walk through the entire list
+    // Adding a last IntNode will make addLast and getLast fast, but removeLast will still be slow
     public void addLast(int x) {
 
         size = size + 1;
         /*
         Can't use p = sentinel.next, but p = sentinel to make sure p is not null,
         otherwise p.next will get NullPointerException
-
-        IntNode p = sentinel.next;
-        while (p != null){
-            p = p.next;
-        }
-        p.next = new IntNode(x, null);
 */
 
         IntNode p = sentinel;
