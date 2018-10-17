@@ -30,55 +30,102 @@ public T getRecursive(int index): Same as get, but uses recursion.
 You may add any private helper classes or methods in LinkedListDeque.java if you deem it necessary.
  */
 
+import java.util.Deque;
 
-public class LinkedListDeque {
+// https://github.com/ladrift/ucb-cs61b-sp17/blob/master/proj1a/LinkedListDeque.java
 
-//    public
+public class LinkedListDeque<Item> {
+    private class Node {
+        Item item;
+        Node prev;
+        Node next;
+
+        public Node() {
+            this.item = null;
+            this.prev = null;
+            this.next = null;
+        }
+
+        public Node(Item item) {
+            this.item = item;
+            this.prev = null;
+            this.next = null;
+        }
+    }
+
+    private Node sentinel;
+    private int size;
 
     public LinkedListDeque() {
-
+        sentinel = new Node();
+        sentinel.prev = sentinel;
+        sentinel.next = sentinel;
+        size = 0;
     }
 
-    //Adds an item of type T to the front of the deque.
-    public void addFirst(int item) {
-
+    public void addFirst(Item item) {
+        Node node = new Node(item);
+        node.prev = sentinel;
+        node.next = sentinel.next;
+        sentinel.next = node;
+        size++;
     }
 
-    // Adds an item of type T to the back of the deque.
-    public void addLast(int item) {
-
+    public void addLast(Item item) {
+        Node node = new Node(item);
+        node.prev = sentinel.prev;
+        node.next = sentinel;
+        sentinel.prev = node;
+        size++;
     }
 
-    // Returns true if deque is empty, false otherwise.
-    public boolean isEmpyt() {
-        return false;
+    public boolean isEmpty() {
+        return size == 0;
     }
 
-
-    // Returns the number of items in the deque.
     public int size() {
-        return 1;
+        return size;
     }
 
-    // Prints the items in the deque from first to last, separated by a space
     public void printDeque() {
-
+        Node curr = sentinel.next;
+        while (curr != sentinel) {
+            System.out.print(curr.item + " ");
+            curr = curr.next;
+        }
     }
 
-    // Removes and returns the item at the front of the deque. If no such item exists, returns null
-    public int removeFirst() {
-        return 1;
+    public Item removeFirst() {
+        Item toRemove = sentinel.next.item;
+        sentinel.next = sentinel.next.next;
+        size--;
+        return toRemove;
     }
 
-    // Removes and returns the item at the back of the deque. If no such item exists, returns null
-    public int removeLast() {
-        return 1;
+    public Item removeLast() {
+        Item toRemove = sentinel.prev.item;
+        sentinel.next = sentinel.next.next;
+        size--;
+        return toRemove;
     }
 
-    // Gets the item at the given index, where 0 is the front, 1 is the next item, and so forth. If no such item exists, returns null. Must not alter the deque!
-    public int get(int index) {
-        return 1;
+    public Item get(int index) {
+        Node curr = sentinel.next;
+        while (index-- > 0) {
+            curr = curr.next;
+        }
+        return curr.item;
     }
 
+    public Item getRecursive(int i) {
+        return getRecursive(i, sentinel.next);
+    }
+
+    public Item getRecursive(int i, Node curr) {
+        if (i == 0) {
+            return curr.item;
+        }
+        return getRecursive(i - 1, curr.next);
+    }
 }
 
