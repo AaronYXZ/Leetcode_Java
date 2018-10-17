@@ -16,12 +16,12 @@ https://leetcode.com/problems/linked-list-cycle/discuss/44489/O(1)-Space-Solutio
 public class L141_LinkedListCycle {
     public boolean hasCycle(ListNode head) {
         if (head == null) return false;
-        ListNode walker = head;
-        ListNode runner = head;
-        while (runner.next != null && runner.next.next != null){
-            walker = walker.next;
-            runner = runner.next.next;
-            if (walker == runner) return true;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) return true;
         }
         return false;
     }

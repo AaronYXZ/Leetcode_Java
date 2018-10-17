@@ -13,63 +13,62 @@ public class SLList {
         }
     }
 
-    // The first item (if it exists) is at sentinel.next
-    private IntNode first;
+    private IntNode sentinel;
     private int size;
 
     public SLList() {
-        first = new IntNode(63, null);
+        sentinel = new IntNode(63, null);
+        // sentinel is a Node at the front of the List (63 is some random number that doesn't mean anything. It could be 0, 1, 99, 10000)
         size = 0;
     }
 
     public SLList(int x) {
-        first = new IntNode(63, null);
-        first.next = new IntNode(x, null);
+        sentinel = new IntNode(63, null);
+        sentinel.next = new IntNode(x, null);
         size = 1;
     }
 
     // Add x to the front of the list
     public void addFirst(int x) {
-        first.next = new IntNode(x, first.next);
+        // we don't modify sentinel node. We only insert the node in front of the previous first node
+        // That is, we let sentinel point to the newly added first node, and let this node points to the previou first node
+        sentinel.next = new IntNode(x, sentinel.next);
         size++;
     }
 
     // Return the first item in the SLList
     public int getFirst() {
-        return first.next.item;
+        return sentinel.next.item;
     }
 
     // Add x to the end of the list
+    // It's slow, For a long list, the addLast method has to walk through the entire list
+    // Adding a last IntNode will make addLast and getLast fast, but removeLast will still be slow
     public void addLast(int x) {
 
         size = size + 1;
         /*
-        Can't use last = sentinel.next, but last = sentinel to make sure last is not null,
-        otherwise last.next will get NullPointerException
-
-        IntNode last = sentinel.next;
-        while (last != null){
-            last = last.next;
-        }
-        last.next = new IntNode(x, null);
+        Can't use p = sentinel.next, but p = sentinel to make sure p is not null,
+        otherwise p.next will get NullPointerException
 */
 
-        IntNode last = first;
-        while (last.next != null){
-            last = last.next;
+        IntNode p = sentinel;
+        // advance p to the end of the list
+        while (p.next != null) {
+            p = p.next;
         }
-        last.next = new IntNode(x, null);
+        p.next = new IntNode(x, null);
     }
 
 
-    public int size(){
+    public int size() {
         return size;
     }
 
     public static void main(String[] args) {
         SLList list = new SLList();
         list.addLast(10);
-        System.out.println(list.first.next.item);
+        System.out.println(list.sentinel.next.item);
     }
 
 }
