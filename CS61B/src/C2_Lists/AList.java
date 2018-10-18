@@ -1,28 +1,50 @@
 package C2_Lists;
 
-public class AList {
+/*
+https://joshhug.gitbooks.io/hug61b/content/chap2/chap25.html
+https://github.com/Berkeley-CS61B/lectureCode-sp17/blob/master/lists4/live/AList.java
 
-    int[] nums;
-    int size;
+Invairants
+The position of the next item to be inserted (using addLast) is always size.
+The number of items in the AList is always size.
+The position of the last item in the list is always size - 1.
+ */
+
+public class AList<Item> {
+
+    private Item[] items;
+    private int size;
+
     /** Creates an empty list. */
     public AList() {
-        nums = new int[100];
+        items = (Item[]) new Object[100];
         size = 0;
     }
 
+    /** Resizes the underlying array to the target capacity. */
+    private void resize(int capacity) {
+        Item[] a = (Item[]) new Object[capacity];
+        System.arraycopy(items, 0, a, 0, size);
+        items = a;
+    }
+
     /** Inserts X into the back of the list. */
-    public void addLast(int x) {
-        nums[size] = x;
-        size++;
+    public void addLast(Item x) {
+        if (size == items.length) {
+            resize(size + 1);
+        }
+
+        items[size] = x;
+        size = size + 1;
     }
 
     /** Returns the item from the back of the list. */
-    public int getLast() {
-        return nums[size-1];
+    public Item getLast() {
+        return items[size - 1];
     }
     /** Gets the ith item in the list (0 is the front). */
-    public int get(int i) {
-        return nums[i];
+    public Item get(int i) {
+        return items[i];
     }
 
     /** Returns the number of items in the list. */
@@ -32,9 +54,10 @@ public class AList {
 
     /** Deletes item from back of the list and
      * returns deleted item. */
-    public int removeLast() {
-        int last = getLast();
-        size--;
-        return last;
+    public Item removeLast() {
+        Item x = getLast();
+        items[size - 1] = null;
+        size = size - 1;
+        return x;
     }
 }
