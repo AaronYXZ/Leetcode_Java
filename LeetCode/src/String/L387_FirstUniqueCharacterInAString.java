@@ -30,7 +30,7 @@ public class L387_FirstUniqueCharacterInAString {
     }
 
     public static void main(String[] args) {
-        System.out.println(firstUniqChar("leetcode"));
+        System.out.println(firstUniqChar("leetcod"));
         System.out.println(firstUniqChar("loveleetcode"));
     }
 }
