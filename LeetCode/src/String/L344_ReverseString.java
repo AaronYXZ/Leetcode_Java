@@ -32,6 +32,7 @@ public class L344_ReverseString {
         return stringBuilder.toString();
     }
 
+   // Best Solution
     public static String solotuion2_reverseString(String s){
         return new StringBuilder(s).reverse().toString();
         // https://leetcode.com/problems/reverse-string/discuss/80937/JAVA-Simple-and-Clean-with-Explanations-6-Solutions
