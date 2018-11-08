@@ -9,11 +9,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamBasic {
+
     // Java 7
-    public static List<String> getLowerCalorieDishesInJava7(List<Dish> dishes){
+    public static List<String> getLowerCalorieDishesInJava7(List<Dish> dishes) {
         List<Dish> lowCaloriesDishes = new ArrayList<>();
-        for (Dish dish:dishes){
-            if (dish.getCalories()<400){
+        for (Dish dish : dishes) {
+            if (dish.getCalories() < 400) {
                 lowCaloriesDishes.add(dish);
             }
         }
@@ -25,15 +26,16 @@ public class StreamBasic {
                 return Integer.compare(o1.getCalories(), o2.getCalories());
             }
         });
-        for (Dish dish:lowCaloriesDishes){
+        for (Dish dish : lowCaloriesDishes) {
             lowCalorieDishNames.add(dish.getName());
         }
         return lowCalorieDishNames;
     }
 
-    public static List<String> getLowerCalorieDishesInJava8(List<Dish> dishes){
+    // Java 8
+    public static List<String> getLowerCalorieDishesInJava8(List<Dish> dishes) {
         return dishes.stream()
-                .filter(dish -> dish.getCalories()<400)
+                .filter(dish -> dish.getCalories() < 400)
                 .sorted(Comparator.comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(Collectors.toList());
