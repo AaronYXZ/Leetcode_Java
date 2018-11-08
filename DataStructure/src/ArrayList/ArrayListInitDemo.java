@@ -21,5 +21,14 @@ public class ArrayListInitDemo {
         obj2.add("b");
         obj2.add("c");
 
+        // 3.use ArrayList plus Arrays.asList
+        // Can add new items
+        List<String> obj3 = new ArrayList<>(Arrays.asList("a", "b", "c"));
+        obj3.add("d");
+
+        for (String string:obj3){
+            System.out.println(string);
+        }
+
     }
 }
