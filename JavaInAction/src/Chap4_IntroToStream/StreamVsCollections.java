@@ -11,12 +11,14 @@ public class StreamVsCollections {
         List<String> strings = Arrays.asList("Java8", "Lambdas", "In", "Action");
         Stream<String> stringStream = strings.stream();
 
+        // collections List of Strings can be looped for any number of times
         strings.forEach(System.out::println);
         System.out.println("-----------------");
 
         strings.forEach(System.out::println);
         System.out.println("-----------------");
 
+        // stream can only be consumed once
         stringStream.forEach(System.out::println);
         System.out.println("-----------------");
 
