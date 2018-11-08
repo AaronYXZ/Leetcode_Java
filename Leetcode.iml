@@ -11,13 +11,12 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library>
-        <CLASSES />
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/Project10_Humana/Dependency/gson-2.8.5.jar!/" />
+        </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/Desktop/Project10_Humana/Dependency/gson-2.2.4-sources.jar!/" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="gson-2.2.4-sources" level="project" />
   </component>
 </module>
