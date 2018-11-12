@@ -26,7 +26,7 @@ public class L560_SubarraySumEqualsK {
     public int subarraySum(int[] nums, int k ){
         int sum = 0, result = 0;
         Map<Integer, Integer> preSum = new HashMap<>();
-        preSum.put(0, 1);
+        preSum.put(0, 1); // in case sum 0f nums[0, i] equals k, 0 means nums[0,0] == 0 and 1 means this appears once
 
         for (int i = 0; i< nums.length; i++){
             sum+=nums[i]; // sum of nums[0, i]
