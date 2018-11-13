@@ -11,7 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaInAction/JavaInAction.iml" filepath="$PROJECT_DIR$/JavaInAction/JavaInAction.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leetcode.iml" filepath="$PROJECT_DIR$/Leetcode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Packages/Packages.iml" filepath="$PROJECT_DIR$/Packages/Packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Packages&amp;Syntax/Packages&amp;Syntax.iml" filepath="$PROJECT_DIR$/Packages&amp;Syntax/Packages&amp;Syntax.iml" />
       <module fileurl="file://$PROJECT_DIR$/ml-usecases/ml-usecases.iml" filepath="$PROJECT_DIR$/ml-usecases/ml-usecases.iml" />
     </modules>
   </component>
