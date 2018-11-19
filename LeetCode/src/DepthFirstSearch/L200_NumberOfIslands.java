@@ -26,7 +26,7 @@ Input:
 Output: 3
 
 S:
-https://leetcode.com/problems/number-of-islands/discuss/56359/Very-concise-Java-AC-solution
+https://leetcode.com/problems/number-of-islands/solution/
  */
 
 public class L200_NumberOfIslands {
@@ -63,5 +63,16 @@ public class L200_NumberOfIslands {
         }
 
         return num_islands;
+    }
+
+    public static void main(String[] args) {
+        char[][] grid = new char[][]
+                {{'1','1','0','0','0'},
+                        {'1', '1','0', '0', '0'},
+                        {'0', '0', '1', '0', '0'},
+                        {'0', '0', '0','1', '1'}
+                };
+        int islands = new L200_NumberOfIslands().numIslands(grid);
+        System.out.println(islands);
     }
 }
