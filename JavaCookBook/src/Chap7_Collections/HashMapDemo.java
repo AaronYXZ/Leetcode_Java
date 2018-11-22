@@ -25,7 +25,7 @@ public class HashMapDemo {
         map.entrySet().forEach(eS -> System.out.println("Key is " + eS.getKey() + "; " + "Value is " + eS.getValue()));
 
         for (Map.Entry<String, String> mapentry:map.entrySet()){
-            System.out.println("Key is " + mapentry.getKey());
+            System.out.println("Key is  " + mapentry.getKey());
         }
     }
 
