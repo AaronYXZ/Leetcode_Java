@@ -1,6 +1,4 @@
-package DepthFirstSearch;
-import static DepthFirstSearch.L94_BinaryTreeInorderTraversal.TreeNode;
-
+package Tree;
 /*
 https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 
@@ -26,6 +24,15 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34216/Simple-
 
  */
 public class L104_MaximumDepthOfBinaryTree {
+    private class TreeNode{
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x){
+            val = x;
+        }
+    }
     public int maxDepth(TreeNode root){
         if (root == null) return 0;
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
