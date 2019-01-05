@@ -1,4 +1,4 @@
-package String;
+package DynamicProgramming;
 
 /*
 Q:
