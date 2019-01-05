@@ -3,8 +3,7 @@ package DynamicProgramming;
 /*
 Q:
 https://leetcode.com/problems/longest-palindromic-substring/description/
-S:
-http://windliang.cc/2018/08/05/leetCode-5-Longest-Palindromic-Substring/
+
 
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
@@ -17,6 +16,10 @@ Example 2:
 
 Input: "cbbd"
 Output: "bb"
+
+S:
+http://windliang.cc/2018/08/05/leetCode-5-Longest-Palindromic-Substring/
+https://leetcode.com/problems/longest-palindromic-substring/discuss/2921/Share-my-Java-solution-using-dynamic-programming
  */
 
 public class L5_LongestPalindromicSubstring {
