@@ -27,6 +27,7 @@ public class L67_AddBinary {
                 q = 0;
             }
 
+
             int sum = p + q + flag;
             flag = sum / 2;
             res = sum % 2 + res;
