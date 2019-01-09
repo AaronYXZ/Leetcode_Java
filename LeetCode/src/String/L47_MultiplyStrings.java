@@ -1,7 +1,7 @@
 package String;
 
 // ToDO Refer to https://www.cnblogs.com/yrbbest/p/4436340.html https://blog.csdn.net/linhuanmars/article/details/20967763
-
+//https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
 public class L47_MultiplyStrings {
     public static String multipy(String num1, String num2){
 //        StringBuilder stringBuilder = new StringBuilder();
