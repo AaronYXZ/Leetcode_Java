@@ -37,6 +37,7 @@ The tree that the list represents is:
 The path sum is (3 + 1) = 4.
 
 https://leetcode.com/problems/path-sum-iv/discuss/106892/Java-solution-Represent-tree-using-HashMap
+
  */
 public class L666_PathSum4 {
 
@@ -44,7 +45,9 @@ public class L666_PathSum4 {
     Map<Integer, Integer> tree = new HashMap<>();
 
     public int pathSum(int[] nums) {
-        if (nums == null || nums.length == 0) return 0;
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
 
         for (int num : nums) {
             int key = num / 10;
@@ -70,8 +73,12 @@ public class L666_PathSum4 {
             return;
         }
 
-        if (tree.containsKey(left)) traverse(left, curSum);
-        if (tree.containsKey(right)) traverse(right, curSum);
+        if (tree.containsKey(left)) {
+            traverse(left, curSum);
+        }
+        if (tree.containsKey(right)) {
+            traverse(right, curSum);
+        }
     }
 
 }
