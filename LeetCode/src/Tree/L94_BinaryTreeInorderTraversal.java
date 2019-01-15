@@ -49,6 +49,9 @@ public class L94_BinaryTreeInorderTraversal {
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(9);
         List<Integer> result = inorderTraversal(root);
+        for (int i:result){
+            System.out.println(i);
+        }
     }
 
 }
