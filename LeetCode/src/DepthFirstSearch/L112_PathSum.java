@@ -30,7 +30,6 @@ then check whether sum is contained in the list
 S2:
 https://leetcode.com/problems/path-sum/discuss/36378/AcceptedMy-recursive-solution-in-Java
 
-
  */
 
 public class L112_PathSum {
