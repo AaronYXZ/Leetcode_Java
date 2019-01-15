@@ -35,10 +35,17 @@ https://leetcode.com/problems/path-sum-iii/discuss/91889/Simple-Java-DFS
 public class L437_PathSum3 {
     public int pathSum(TreeNode root, int sum) {
         if (root == null) return 0;
+        // # of paths in a tree, can be calculated as # of paths starting from the root, and # of paths of two
+        // sub trees: rooted in root.left and root.right
+        // which gives the function below: pathSum = sumFrom(root) + Sum(root.left) + Sum(root.right)
         return pathSumFrom(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
     }
 
     private int pathSumFrom(TreeNode node, int sum) {
+        // calculates the # of paths starting from the given node.
+        // it can be split into 3 parts: 1) if the current node itself is a path,
+        // 2) # of paths starting from node.left, with sums equal to sum - node.val
+        // 3) # of paths staritng from node.right, with sums equal to sum - node.val
         if (node == null) return 0;
         return (node.val == sum ? 1 : 0)
                 + pathSumFrom(node.left, sum - node.val) + pathSumFrom(node.right, sum - node.val);
