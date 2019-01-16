@@ -62,7 +62,6 @@ public class L347_TopKFrequentElements {
         for (int n:list){
             System.out.println(n);
         }
-        System.out.println("a");
     }
 
 }
