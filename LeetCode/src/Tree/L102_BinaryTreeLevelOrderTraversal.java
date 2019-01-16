@@ -35,17 +35,16 @@ public class L102_BinaryTreeLevelOrderTraversal {
 
         if(root == null) return resultList;
 
-        queue.offer(root);
+        queue.offer(root); // add an element as the tail (last element) of the queue
 
         while(!queue.isEmpty()){
             List<Integer> tempList = new LinkedList<>();
             int levelNum = queue.size();
             for (int i = 0; i < levelNum; i++){
-                TreeNode node = queue.peek();
+                TreeNode node = queue.poll();
                 if (node.left != null) queue.offer(node.left);
                 if(node.right != null) queue.offer(node.right);
                 tempList.add(node.val);
-                queue.poll();
             }
             resultList.add(tempList);
         }
