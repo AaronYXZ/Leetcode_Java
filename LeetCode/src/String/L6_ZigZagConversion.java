@@ -5,6 +5,7 @@ Q:
 https://leetcode.com/problems/zigzag-conversion/
 S:
 https://leetcode.com/problems/zigzag-conversion/solution/
+Approach 2 Visit by row
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
@@ -30,6 +31,8 @@ P     I    N
 A   L S  I G
 Y A   H R
 P     I
+
+
  */
 
 public class L6_ZigZagConversion {
