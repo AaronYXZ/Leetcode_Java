@@ -41,7 +41,7 @@ public class L102_BinaryTreeLevelOrderTraversal {
             List<Integer> tempList = new LinkedList<>();
             int levelNum = queue.size();
             for (int i = 0; i < levelNum; i++){
-                TreeNode node = queue.poll();
+                TreeNode node = queue.poll(); // get an element from the head of the queue
                 if (node.left != null) queue.offer(node.left);
                 if(node.right != null) queue.offer(node.right);
                 tempList.add(node.val);
