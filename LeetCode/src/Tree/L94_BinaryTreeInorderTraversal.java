@@ -37,6 +37,8 @@ public class L94_BinaryTreeInorderTraversal {
             root = stack.pop();
             result.add(root.val);
             root = root.right;
+            // This means if current node (Curr) has no right node, we get the next node from stack.
+            // Otherwise, push every left node of that subtree (rooted at Curr) to stack
         }
         return result;
     }
