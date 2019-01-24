@@ -29,4 +29,5 @@ public class L561_ArrayPartition1 {
 
         return sum;
     }
+
 }
