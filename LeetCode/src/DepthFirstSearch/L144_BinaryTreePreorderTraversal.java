@@ -1,5 +1,8 @@
 package DepthFirstSearch;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -27,6 +30,24 @@ public class L144_BinaryTreePreorderTraversal {
             }
         }
         return list;
+    }
+
+    public List<Integer> preorderTraversal2(TreeNode root) {
+//        https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45551/Preorder-Inorder-and-Postorder-Iteratively-Summarization
+        List<Integer> result = new ArrayList<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode p = root;
+        while(!stack.isEmpty() || p != null) {
+            if(p != null) {
+                stack.push(p);
+                result.add(p.val);  // Add before going to children
+                p = p.left;
+            } else {
+                TreeNode node = stack.pop();
+                p = node.right;
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
