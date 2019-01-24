@@ -20,6 +20,8 @@ public class L144_BinaryTreePreorderTraversal {
                 rights.push(node.right);
             }
             node = node.left;
+
+            // if node's null, meaning there's no left node, we turn to right node
             if (node == null && !rights.isEmpty()) {
                 node = rights.pop();
             }
@@ -37,5 +39,6 @@ public class L144_BinaryTreePreorderTraversal {
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(9);
         List<Integer> result = preorderTraversal(root);
+        result.stream().forEach(System.out::println);
     }
 }
