@@ -17,8 +17,8 @@ public class HashMapSortDemo {
         hmap.put(0, "R");
 
         System.out.println("Before Sorting:");
-        for (Map.Entry<Integer, String> entry:hmap.entrySet()){
-            System.out.println("Key is "+entry.getKey()+" Value is "+entry.getValue());
+        for(Map.Entry<Integer, String > entry:hmap.entrySet()){
+            System.out.println("key is "+ entry.getKey() + " Value is " + entry.getValue());
         }
 
         System.out.println("After Sorting");
