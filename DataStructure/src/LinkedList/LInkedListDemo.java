@@ -9,12 +9,15 @@ public class LInkedListDemo {
         linkedlist.add("Item1");
         linkedlist.add("Item5");
         linkedlist.add("Item3");
+
+        linkedlist.addLast("Last Item");
+
         linkedlist.add("Item6");
         linkedlist.add("Item2");
 
         /*Add First and Last Element*/
         linkedlist.addFirst("First Item");
-        linkedlist.addLast("Last Item");
+
         System.out.println("LinkedList Content after addition: " +linkedlist);
 
         // Add and Remove items
@@ -25,6 +28,20 @@ public class LInkedListDemo {
 
         // Get item by index
         System.out.println(linkedlist.get(5));
+
+        // offer / poll / peek
+        System.out.println("Test offer, poll, peek method");
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList2.offerFirst(5);
+        linkedList2.offerFirst(10);
+        linkedList2.offerLast(3);
+        linkedList2.offerFirst(2);
+        System.out.println(linkedList2.peekFirst());
+        System.out.println(linkedList2.pollFirst());
+        System.out.println(linkedList2.peekFirst());
+        System.out.println(linkedList2.peekLast());
+        System.out.println(linkedList2.pollLast());
+        System.out.println(linkedList2.peekLast());
 
     }
 }
