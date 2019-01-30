@@ -1,6 +1,7 @@
 package Stack;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /*
 Q:
@@ -18,20 +19,23 @@ ToDo Solution2 Array
  */
 
 public class L739_DailyTemperatures {
-    public int[] solution1Stack(int[] temperatures){
-        Stack<Integer> stack = new Stack<>();
-        int[] result = new int[temperatures.length]; // Be default all 0's
-        for (int i = 0; i < temperatures.length; i++){
+    public static int[] solution1Stack(int[] T){
+        Deque<Integer> deque = new ArrayDeque<>();
+        int[] result = new int[T.length]; // Be default all 0's
+        for (int i = 0; i < T.length; i++){
             // loop through every temp in temperatures, i records current-in-the-loop temp index
-            while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]){
-                int idx = stack.pop();
+            while (!deque.isEmpty() && T[i] > T[deque.peekLast()]){
+                int idx = deque.pollLast();
                 result[idx] = i - idx;
             }
 
-            stack.push(i);
+            deque.addLast(i);
         }
         return result;
+    }
 
-
+    public static void main(String[] args) {
+        int[] T = {73, 74, 75, 71, 69, 72, 76, 73};
+        System.out.println(solution1Stack(T));
     }
 }
