@@ -26,25 +26,28 @@ Explanation:
 Note:
 All elements in nums1 and nums2 are unique.
 The length of both nums1 and nums2 would not exceed 1000.
+
+https://leetcode.com/problems/next-greater-element-i/discuss/97595/Java-10-lines-linear-time-complexity-O(n)-with-explanation
  */
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 public class L496_NextGreaterNumber1 {
 
 
     public int[] nextGreaterElementStack(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> deque = new ArrayDeque<>();
 
         for (int num : nums2) {
-            while (!stack.empty() && stack.peek() < num) {
-                map.put(stack.pop(), num);
+            while (!deque.isEmpty() && deque.peekLast() < num) {
+                map.put(deque.pollLast(), num);
             }
-            stack.push(num);
+            deque.offerLast(num);
         }
 
         for (int i = 0; i < nums1.length; i++){
