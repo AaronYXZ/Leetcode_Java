@@ -15,7 +15,7 @@ public class StackDemo {
         Deque<Integer> stack1 = new ArrayDeque<>();
         stack1.push(1);
         stack1.push(2);
-        System.out.println(stack1.peek());
+        System.out.println(stack1.pollLast());
 
     }
 }
