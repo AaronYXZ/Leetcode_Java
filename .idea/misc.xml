@@ -3,8 +3,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/JavaInAction/pom.xml" />
+        <option value="$PROJECT_DIR$/LeetCode/pom.xml" />
+        <option value="$PROJECT_DIR$/Leetcode_Java/src/Leetcode_Java/pom.xml" />
       </list>
     </option>
   </component>
