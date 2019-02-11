@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/LeetCode/pom.xml" />
         <option value="$PROJECT_DIR$/Leetcode_Java/src/Leetcode_Java/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaInAction/src/main/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
