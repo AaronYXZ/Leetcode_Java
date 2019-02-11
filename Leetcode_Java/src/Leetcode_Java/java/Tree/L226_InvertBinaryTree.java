@@ -55,8 +55,6 @@ public class L226_InvertBinaryTree {
             if (node.right != null){
                 stack.push(node.right);
             }
-
-
         }
 
         return root;
