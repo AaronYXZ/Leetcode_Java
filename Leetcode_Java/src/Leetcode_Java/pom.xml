@@ -10,6 +10,7 @@
     <groupId>Leetcode_Java</groupId>
     <artifactId>Leetcode_Java</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
