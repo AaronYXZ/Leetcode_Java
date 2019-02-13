@@ -57,4 +57,25 @@ public class L20_ValidParentheses {
 
         return deque.isEmpty();
     }
+
+    public boolean isValid2(String s){
+        Map<Character, Character> map = new HashMap<>();
+        map.put('(', ')');
+        map.put('{', '}');
+        map.put('[', ']');
+        Deque<Character> deque = new ArrayDeque<>();
+        for (char c:s.toCharArray()){
+            if (map.containsKey(c)){
+                deque.offerLast(c);
+            }
+            else if (!deque.isEmpty() && map.get(deque.peekLast()) == c){
+                deque.pollLast();
+            }
+            else{
+                return false;
+            }
+        }
+
+        return deque.isEmpty();
+    }
 }
