@@ -25,7 +25,7 @@ https://leetcode.com/problems/min-stack/discuss/49014/Java-accepted-solution-usi
 
 // The biggest challenge here is if the top of stack is min, after we pop it, we no longer have the new min
 // The below solution always hold second smallest value right below the min. So that after we pop the min, we could
-// assign the min to the previous second smaleest value.
+// assign the min to the previous second smallest value.
 public class L155_MinStack {
     int min = Integer.MAX_VALUE;
     Deque<Integer> deque = new ArrayDeque<>();
