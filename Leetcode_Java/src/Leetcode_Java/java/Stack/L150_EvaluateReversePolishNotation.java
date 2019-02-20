@@ -39,7 +39,7 @@ Explanation:
 = 17 + 5
 = 22
 
-Idea is simple: use stack (ArrayDeque) to store every int, whenever there's a symbol, poll 2 item (from end of deck)
+Idea is simple: use stack (Queue_Stack_Deque) to store every int, whenever there's a symbol, poll 2 item (from end of deck)
 and calculate, then add to last of deque. Do this unitl all item in String[] are evaluated
  */
 public class L150_EvaluateReversePolishNotation {
