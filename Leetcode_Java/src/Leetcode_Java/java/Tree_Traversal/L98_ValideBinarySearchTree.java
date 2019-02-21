@@ -1,6 +1,8 @@
-package Tree;
+package Tree_Traversal;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /*
 Q:
 https://leetcode.com/problems/validate-binary-search-tree/description/
@@ -36,14 +38,14 @@ https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-on
 
 public class L98_ValideBinarySearchTree {
     public static boolean validBST(TreeNode root){
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> deque = new ArrayDeque<>();
         TreeNode pre = null;
-        while (root != null || !stack.empty()){
+        while (root != null || !deque.isEmpty()){
             while (root != null){
-                stack.push(root);
+                deque.push(root);
                 root = root.left;
             }
-            root = stack.pop();
+            root = deque.pop();
             if (pre != null && pre.val >= root.val) return false;
             pre = root;
             root = root.right;

@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 
 public class TreeNode {
     TreeNode left, right;

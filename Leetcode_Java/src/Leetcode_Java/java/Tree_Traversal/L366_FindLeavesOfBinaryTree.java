@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 
 public class L366_FindLeavesOfBinaryTree {
 

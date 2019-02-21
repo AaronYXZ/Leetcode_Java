@@ -1,8 +1,9 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
-import java.util.Stack;
 
 /*
 Q:
@@ -24,15 +25,15 @@ public class L94_BinaryTreeInorderTraversal {
 
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Deque<TreeNode> deque = new ArrayDeque<>();
         TreeNode cur = root;
-        while (cur != null || !stack.empty()) {
+        while (cur != null || !deque.isEmpty()) {
             while (cur != null) {
-                stack.add(cur);
+                deque.add(cur);
                 cur = cur.left;
-            }
+            } // push all the left node to the stack
 
-            cur = stack.pop();
+            cur = deque.pop();
             list.add(cur.val);
             cur = cur.right;
         }

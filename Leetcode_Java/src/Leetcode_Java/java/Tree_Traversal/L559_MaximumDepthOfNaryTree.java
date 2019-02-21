@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 
 import java.util.List;
 /*

@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 
 /*
 https://leetcode.com/problems/path-sum-iii/description/

@@ -1,6 +1,4 @@
-package DepthFirstSearch;
-
-import static DepthFirstSearch.L94_BinaryTreeInorderTraversal.TreeNode;
+package Tree_Traversal;
 
 /*
 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/

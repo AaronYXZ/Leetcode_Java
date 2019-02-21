@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package Tree_Traversal;
 // https://www.geeksforgeeks.org/?p=618/
 public class DFS_BFS_Demo {
     public static void printPostOrder(TreeNode root){
