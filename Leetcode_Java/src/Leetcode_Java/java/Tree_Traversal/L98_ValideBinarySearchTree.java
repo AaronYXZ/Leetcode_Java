@@ -37,6 +37,26 @@ https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-on
  */
 
 public class L98_ValideBinarySearchTree {
+    // In-order traversal, keep record of the pre node. Compare pre.val and curr.val
+    public boolean isValidBST(TreeNode root) {
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        TreeNode pre = null;
+        TreeNode curr = root;
+        while(curr != null || !deque.isEmpty()){
+            if (curr != null){
+                deque.offerLast(curr);
+                curr = curr.left;
+            }
+            else{
+                curr = deque.pollLast();
+                if (pre != null && pre.val >= curr.val) return false;
+                pre = curr;
+                curr = curr.right;
+            }
+        }
+        return true;
+    }
+
     public static boolean validBST(TreeNode root){
         Deque<TreeNode> deque = new ArrayDeque<>();
         TreeNode pre = null;
@@ -52,4 +72,5 @@ public class L98_ValideBinarySearchTree {
         }
         return true;
     }
+
 }
