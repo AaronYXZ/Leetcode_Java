@@ -35,16 +35,16 @@ public class L144_BinaryTreePreorderTraversal {
     public List<Integer> preorderTraversal2(TreeNode root) {
 //        https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45551/Preorder-Inorder-and-Postorder-Iteratively-Summarization
         List<Integer> result = new ArrayList<>();
-        Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode p = root;
-        while(!stack.isEmpty() || p != null) {
-            if(p != null) {
-                stack.push(p);
-                result.add(p.val);  // Add before going to children
-                p = p.left;
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        TreeNode curr = root;
+        while(curr != null || !deque.isEmpty())  {
+            if(curr != null) {
+                deque.offerLast(curr);
+                result.add(curr.val);  // Add before going to children
+                curr = curr.left;
             } else {
-                TreeNode node = stack.pop();
-                p = node.right;
+                curr = deque.pollLast();
+                curr = curr.right;
             }
         }
         return result;

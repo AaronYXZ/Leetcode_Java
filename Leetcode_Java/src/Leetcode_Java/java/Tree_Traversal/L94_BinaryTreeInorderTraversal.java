@@ -41,4 +41,23 @@ public class L94_BinaryTreeInorderTraversal {
         return list;
 
     }
+
+    public List<Integer> inorderTraversal2(TreeNode root){
+        List<Integer> result = new ArrayList<>();
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        TreeNode curr = root;
+        while (curr != null || !deque.isEmpty()){
+            if (curr != null){ // get the leftmost node while push every left node to deque
+                deque.offerLast(curr);
+                curr = curr.left;
+            }
+            else{ // start from adding the left node to list, keep adding by poping the node from deque, stop to visit
+                // the right whenever left and parent has been added to list
+                curr = deque.pollLast();
+                result.add(curr.val);
+                curr = curr.right;
+            }
+        }
+        return result;
+    }
 }
