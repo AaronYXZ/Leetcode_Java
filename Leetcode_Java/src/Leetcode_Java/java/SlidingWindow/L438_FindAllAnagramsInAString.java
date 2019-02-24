@@ -3,10 +3,9 @@ package SlidingWindow;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
-import com.sun.deploy.util.StringUtils;
 /*
 Q:
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
@@ -71,7 +70,7 @@ public class L438_FindAllAnagramsInAString {
 
     public static List<Integer> solution2_slidingWindow(String s, String p){
 //        https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new LinkedList<>();
         if (p.length() > s.length()) return result;
 
         // create a hashmap to save the Characters of the target substring
@@ -85,10 +84,13 @@ public class L438_FindAllAnagramsInAString {
 
         // two pointers: begin - left pointer of the window, end - right pointer of the window
         int begin = 0, end = 0;
-
+//        int head = 0;
 //        int len = Integer.MAX_VALUE;
 
         while(end < s.length()){
+
+            // iterate until all keys in map have been matched,
+            // and values are less or equal than occurance of chars in s; the i.e. counter == 0
             char c = s.charAt(end);
             if (map.containsKey(c)) {
                 map.put(c, map.get(c) - 1);
@@ -97,21 +99,21 @@ public class L438_FindAllAnagramsInAString {
             }
             end ++;
 
+            // i
             while (counter == 0){
                 char temp = s.charAt(begin);
                 if (map.containsKey(temp)){
                     map.put(temp, map.get(temp) + 1);
                     if (map.get(temp) > 0) counter ++;
                 }
-
+                if (end - begin == p.length()){
+                    result.add(begin);
+                }
                 begin ++;
             }
         }
 
         return result;
-
-
-
     }
 
 }
