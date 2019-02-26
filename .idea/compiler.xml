@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="CS61B" />
         <module name="LeetCode" />
         <module name="Leetcode_Java" />
-        <module name="main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CS61B" target="1.5" />
       <module name="Leetcode_Java" target="1.8" />
       <module name="main" target="1.5" />
     </bytecodeTargetLevel>
