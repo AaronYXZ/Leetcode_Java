@@ -25,23 +25,19 @@ https://leetcode.com/problems/longest-palindromic-substring/discuss/2921/Share-m
 public class L5_LongestPalindromicSubstring {
 
     public static String solution3DynamicProgramming(String s) {
-        int length = s.length();
-        boolean[][] P = new boolean[length][length];
-        int maxLen = 0;
-        String maxPal = "";
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        String res = "";
 
-        for (int i = 1; i <= length; i++) {
-            for (int start = 0; start < length; start++) {
-                int end = start + i - 1;
-                if (end >= length) {
-                    break;
-                }
-                P[start][end] = (i == 1 || i == 2 || P[start + 1][end - 1]) && s.charAt(start) == s.charAt(end);
-                if (P[start][end] && i > maxLen) {
-                    maxPal = s.substring(start, end + 1);
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i; j < n; j++) {
+                dp[i][j] = s.charAt(i) == s.charAt(j) && (j - i < 3 || dp[i + 1][j - 1]);
+
+                if (dp[i][j] && (res == null || j - i + 1 > res.length())) {
+                    res = s.substring(i, j + 1);
                 }
             }
         }
-        return maxPal;
+        return res;
     }
 }
