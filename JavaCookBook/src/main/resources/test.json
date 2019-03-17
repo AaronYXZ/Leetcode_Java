@@ -1,0 +1,12 @@
+{
+  "textParts": [
+    "Please see attached for an analysis.  adjustmen$ts reorder checks"
+  ],
+  "attributes": {
+    "subject": "analysis adjustment less that $10K",
+    "attachment1":"analysis adjustment form category credit FULL MONTH $50.00",
+    "attachment2":"sth to take up the space Hard Dollar"
+
+  },
+  "goldValue": "analysis adjustment"
+}
