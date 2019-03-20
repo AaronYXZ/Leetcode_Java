@@ -2,6 +2,7 @@ package Chap5_WorkingWithStreams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class P5_2_Mapping {
@@ -48,6 +49,17 @@ public class P5_2_Mapping {
         }
         boolean isHealth = menu.stream().allMatch(dish -> dish.getCalories()<1000);
         boolean isHealth2 = menu.stream().noneMatch(dish -> dish.getCalories()>=1000);
+
+        Optional<Dish> dish = menu.stream().filter(Dish::isVegetarian).findAny();
+
+        // Reducing
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+        int sum = numbers.stream().reduce(0, (a,b)->a + b);
+        int sum2 = numbers.stream().reduce(0,Integer::sum);
+        Optional<Integer> max = numbers.stream().reduce((x, y) -> (Math.max(x,y)));
+        Optional<Integer> max2 = numbers.stream().reduce(Integer::max);
+
+        // Quiz
 
 
     }
