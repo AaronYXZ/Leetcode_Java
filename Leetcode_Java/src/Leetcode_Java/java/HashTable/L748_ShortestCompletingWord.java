@@ -31,7 +31,7 @@ Every words[i] will consist of lowercase letters, and have length in range [1, 1
 
 S:
 https://leetcode.com/problems/shortest-completing-word/discuss/158110/Java-6ms-beats-100-PRIME-NUMBERS
-
+assign each letter a prime number and compute the product for the license plate. Then, compute the product for each word in wordlist. We know if the char product for a word is divisible by the license plate char product, it contains all the characters.
 ToDo
 S2:
 https://leetcode.com/problems/shortest-completing-word/discuss/110137/Java-Solution-using-character-Array
