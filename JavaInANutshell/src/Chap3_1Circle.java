@@ -1,4 +1,4 @@
-public class CHap3_1Circle {
+public class Chap3_1Circle {
     public static final double PI = 3.14159;
 
     public static double radiansToDegrees(double radian){

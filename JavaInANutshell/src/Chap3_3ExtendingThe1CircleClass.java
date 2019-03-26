@@ -1,4 +1,4 @@
-public class Chap3_3ExtendingThe1CircleClass extends CHap3_1Circle {
+public class Chap3_3ExtendingThe1CircleClass extends Chap3_1Circle {
 
 
 
