@@ -24,17 +24,29 @@ public class L206_ReverseLinkedList {
     public static ListNode reverseList(ListNode head) {
         if (head == null) return head;
         Stack<Integer> stack = new Stack<>();
-        while (head != null){
+        while (head != null) {
             stack.push(head.val);
             head = head.next;
         }
         ListNode sentinel = new ListNode(stack.pop());
         ListNode result = sentinel;
-        while(!stack.empty()){
+        while (!stack.empty()) {
             sentinel.next = new ListNode(stack.pop());
             sentinel = sentinel.next;
         }
         return result;
+    }
+
+    public ListNode reverseListInPlace(ListNode head) {
+        //https://leetcode.com/problems/reverse-linked-list/discuss/58125/In-place-iterative-and-recursive-Java-solution
+        ListNode newHead = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = next;
+        }
+        return newHead;
     }
 
     public static void main(String[] args) {
