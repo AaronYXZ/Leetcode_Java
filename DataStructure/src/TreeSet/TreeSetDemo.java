@@ -14,8 +14,20 @@ public class TreeSetDemo {
 
         //TreeSet doesn't allow null element
         TreeSet<Object> treeSet = new TreeSet<>();
-        treeSet.add(null);
+        // This will raise NullPointerException
+        //        treeSet.add(null);
 
+        TreeSet<String> treeSet1 = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
+        treeSet1.add("Gosling");
+        treeSet1.add("da Vinci");
+        treeSet1.add("van Gogh");
+        treeSet1.add("Java To Go");
+        treeSet1.add("Vanguard");
+        treeSet1.add("Darwin");
+        treeSet1.add("Darwin"); // TreeSet is Set, ignores duplicates.
+        System.out.printf("Our set contains %d elements", treeSet1.size());
+        System.out.println("");// Since it is sorted we can easily get various subsets
+        System.out.println("Lowest (alphabetically) is " + treeSet1.first());
 
     }
 }
