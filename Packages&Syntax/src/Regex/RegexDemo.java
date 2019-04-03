@@ -17,5 +17,6 @@ public class RegexDemo {
             matched.add(matcher.group());
         }
         matched.stream().forEach(System.out::println);
+
     }
 }
