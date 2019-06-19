@@ -9,7 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" filepath="$PROJECT_DIR$/JavaCookBook/JavaCookBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" filepath="$PROJECT_DIR$/JavaInANutshell/JavaInANutshell.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leetcode_Java/src/Leetcode_Java/Leetcode_Java.iml" filepath="$PROJECT_DIR$/Leetcode_Java/src/Leetcode_Java/Leetcode_Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Packages&amp;Syntax/Packages&amp;Syntax.iml" filepath="$PROJECT_DIR$/Packages&amp;Syntax/Packages&amp;Syntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Packages_Syntax/Packages_Syntax.iml" filepath="$PROJECT_DIR$/Packages_Syntax/Packages_Syntax.iml" />
     </modules>
   </component>
 </project>
